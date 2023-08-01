@@ -1,0 +1,7 @@
+RewriteEngine On 
+RewriteCond %{SERVER_PORT} 80
+RewriteCond %{HTTP_HOST} ^(www\.)?life9sys\.com
+RewriteRule ^(.*)$ https://www.life9sys.com/$1 [R,L]
+RewriteCond %{HTTP_HOST} ^life9sys\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.life9sys\.com$
+RewriteRule ^avidemo$ "http\:\/\/3\.7\.202\.112\/" [R=301,L]
